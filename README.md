@@ -1,6 +1,32 @@
 tenderseo-api
 =============
 
+## Quick start
+
+If you just want to get started, and see some fast results, here is a quick quide for you.
+
+```
+mkdir new-path
+cd new-path
+composer require mh/tenderseo-api
+```
+
+Now the folder is ready, create a file as following, and you got your first article.
+
+```
+<?php
+use TenderSEO\Client;
+
+require_once(__DIR__.'/vendor/autoload.php');
+
+$client = new Client();
+
+$r = $client->randomArticle();
+var_dump($r);
+```
+
+Done! :) Now, if you like the result, start by create an account which you can do with the API as well.
+
 ## Installation
 
 ### Composer
@@ -59,6 +85,21 @@ $client->signup([
 
 Now, as a response, you will get your new API KEY, so remember to save it, otherwise you will have to send a message to our support at info@tenderseo.com.
 
+### Get user status
+
+If you want to check your status, how many credits you have left and other useful informations.
+
+```
+<?php
+use TenderSEO\Client;
+
+$client = new Client([
+    'key' => 'YOUR KEY',
+]);
+
+$client->status();
+```
+
 ### Get random article
 
 Now, you are able to request random articles from our archive to place into your website, this is also a great way to play for free with our API.
@@ -76,9 +117,40 @@ $client->randomArticle();
 
 ### Order new article
 
-Will come soon. Until we have finished the documentation take a look at our example.php file for further instructions.
+If you wants to create a new article on our platform, use this end point.
+
+```
+<?php
+use TenderSEO\Client;
+
+$client = new Client([
+    'key' => 'YOUR KEY',
+]);
+
+$client->createArticle([
+    'language' => 'english',
+    'keywords' => 'car, blue',
+    'words' => 50,
+    'tag' => 'test',
+    'test' => true, // the order will not be processed
+]);
+```
 
 ### Get articles
 
-Will come soon. Until we have finished the documentation take a look at our example.php file for further instructions.
+You can download all your articles as you like, or order them with different options, so you easily can cherry pick articles for a specific blog.
 
+```
+<?php
+use TenderSEO\Client;
+
+$client = new Client([
+    'key' => 'YOUR KEY',
+]);
+
+$client->createArticle([
+    'language' => 'english',
+    'tag' => 'test',
+    'from' => '2019-01-01 00:00:00',
+]);
+```

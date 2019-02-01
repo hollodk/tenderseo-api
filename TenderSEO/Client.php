@@ -55,10 +55,6 @@ class Client
 
     public function randomArticle()
     {
-        if (!$this->key) {
-            throw new \Exception('You forgot to provide api key');
-        }
-
         return $this->_request('article/random');
     }
 
