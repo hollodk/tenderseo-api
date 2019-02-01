@@ -27,12 +27,12 @@ class Client
 
     public function status()
     {
-        return $this->request('status');
+        return $this->_request('status');
     }
 
     public function signup($options)
     {
-        return $this->request('signup', $options, 'post');
+        return $this->_request('signup', $options, 'post');
     }
 
     public function createArticle($options)
@@ -41,28 +41,28 @@ class Client
             throw new \Exception('You forgot to provide api key');
         }
 
-        return $this->request('order/create', $options, 'post');
+        return $this->_request('order/create', $options, 'post');
     }
 
-    public function getOrder($options)
+    public function order($options)
     {
         if (!$this->key) {
             throw new \Exception('You forgot to provide api key');
         }
 
-        return $this->request('order', $options);
+        return $this->_request('order', $options);
     }
 
-    public function getRandomArticle()
+    public function randomArticle()
     {
         if (!$this->key) {
             throw new \Exception('You forgot to provide api key');
         }
 
-        return $this->request('article/random');
+        return $this->_request('article/random');
     }
 
-    public function getArticle($uuid)
+    public function article($uuid)
     {
         if (!$this->key) {
             throw new \Exception('You forgot to provide api key');
@@ -72,10 +72,10 @@ class Client
             'uuid' => $uuid,
         ];
 
-        return $this->request('article', $options);
+        return $this->_request('article', $options);
     }
 
-    public function getArticles($options)
+    public function articles($options)
     {
         if (!$this->key) {
             throw new \Exception('You forgot to provide api key');
@@ -83,10 +83,10 @@ class Client
 
         $url = 'articles';
 
-        return $this->request($url, $options);
+        return $this->_request($url, $options);
     }
 
-    private function request($suffix, $options=[], $method='get')
+    private function _request($suffix, $options=[], $method='get')
     {
         if ($this->key) {
             $options['key'] = $this->key;

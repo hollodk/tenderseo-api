@@ -71,7 +71,7 @@ $client = new Client([
     'key' => 'YOUR KEY',
 ]);
 
-$client->getRandomArticle();
+$client->randomArticle();
 ```
 
 ### Order new article

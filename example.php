@@ -18,7 +18,7 @@ require_once(__DIR__.'/require.php'); // helper functions
  *
  * $client->setApiKey($result->api_key);
  *
- * $client->getRandomArticle();
+ * $client->randomArticle();
  */
 
 /**
@@ -26,7 +26,7 @@ require_once(__DIR__.'/require.php'); // helper functions
  *
  * $client = new Client(['key' => $key]);
  *
- * $client->getRandomArticle();
+ * $client->randomArticle();
  */
 
 
@@ -77,7 +77,7 @@ $client->setApiKey($result->api_key);
  */
 write("Now we are going to fetch a random article from our database for your pleasure :)");
 
-$article = $client->getRandomArticle();
+$article = $client->randomArticle();
 
 var_dump($article);
 
