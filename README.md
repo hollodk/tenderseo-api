@@ -1,6 +1,8 @@
 tenderseo-api
 =============
 
+Welcome to the client library for tenderseo.com, speed up your blogging.
+
 ## Quick start
 
 If you just want to get started, and see some fast results, here is a quick quide for you.
