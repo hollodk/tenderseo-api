@@ -76,4 +76,9 @@ $client->getRandomArticle();
 
 ### Order new article
 
+Will come soon. Until we have finished the documentation take a look at our example.php file for further instructions.
+
 ### Get articles
+
+Will come soon. Until we have finished the documentation take a look at our example.php file for further instructions.
+
