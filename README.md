@@ -5,7 +5,7 @@ Welcome to the client library for tenderseo.com, speed up your blogging.
 
 ## Quick start
 
-If you just want to get started, and see some fast results, here is a quick quide for you.
+If you just want to get started, and see some fast results, here is a quick guide for you.
 
 ```
 mkdir new-path
@@ -132,6 +132,7 @@ $client = new Client([
 $client->createArticle([
     'language' => 'english',
     'keywords' => 'car, blue',
+    'service' => 'article', // article or translation
     'words' => 50,
     'tag' => 'test',
     'test' => true, // the order will not be processed
