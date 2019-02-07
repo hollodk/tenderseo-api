@@ -53,6 +53,11 @@ class Client
         return $this->_request('order', $options);
     }
 
+    public function randomImage($options)
+    {
+        return $this->_request('image/random', $options);
+    }
+
     public function randomArticle()
     {
         return $this->_request('article/random');
