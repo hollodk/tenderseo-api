@@ -1,7 +1,17 @@
 tenderseo-api
 =============
 
-Welcome to the client library for tenderseo.com, speed up your blogging.
+> Welcome to the client library for tenderseo.com, speed up your blogging.
+
+[![Build Status](https://img.shields.io/travis/hollodk/tenderseo-api.svg?style=flat)](https://travis-ci.org/hollodk/tenderseo-api)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/hollodk/tenderseo-api.svg?style=flat)](https://scrutinizer-ci.com/g/hollodk/tenderseo-api/)
+[![Scrutinizer Code Intelligence](https://scrutinizer-ci.com/g/hollodk/tenderseo-api/badges/code-intelligence.svg)](https://scrutinizer-ci.com/g/hollodk/tenderseo-api/)
+
+[![Latest Release](https://img.shields.io/packagist/v/mh/tenderseo-api.svg)](https://packagist.org/packages/mh/tenderseo-api)
+[![MIT License](https://img.shields.io/packagist/l/mh/tenderseo-api.svg)](http://opensource.org/licenses/MIT)
+[![Total Downloads](https://img.shields.io/packagist/dt/mh/tenderseo-api.svg)](https://packagist.org/packages/mh/tenderseo-api)
+
+Developed by [Michael Holm](http://hollo.dk)
 
 ## Quick start
 
