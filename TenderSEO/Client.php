@@ -81,10 +81,16 @@ class Client
         return $this->_request('article', $options);
     }
 
-    public function articles($options)
+    public function articles($options=null)
     {
         if (!$this->key) {
             throw new \Exception('You forgot to provide api key');
+        }
+
+        $options = ($options == null) ? [] : $options;
+
+        if (isset($options['from']) && $options['from'] instanceOf \DateTime) {
+            $options['from'] = $options['from']->format('Y-m-d');
         }
 
         $url = 'articles';
