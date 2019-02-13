@@ -9,7 +9,7 @@ class Client
     private $key;
     private $isTest = false;
 
-    public function __construct($params=[])
+    public function __construct($params = [])
     {
         if (isset($params['test'])) {
             $this->isTest = $params['test'];
@@ -81,7 +81,7 @@ class Client
         return $this->_request('article', $options);
     }
 
-    public function articles($options=null)
+    public function articles($options = null)
     {
         if (!$this->key) {
             throw new \Exception('You forgot to provide api key');
@@ -98,7 +98,7 @@ class Client
         return $this->_request($url, $options);
     }
 
-    private function _request($suffix, $options=[], $method='get')
+    private function _request($suffix, $options = [], $method = 'get')
     {
         if ($this->key) {
             $options['key'] = $this->key;
