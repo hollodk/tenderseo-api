@@ -63,9 +63,15 @@ class Client
         return $this->_request('review', $options);
     }
 
-    public function randomArticle()
+    public function randomArticle($options=null)
     {
-        return $this->_request('article/random');
+        $url = 'article/random';
+
+        if ($options && isset($options['language'])) {
+            $url .= '?language='.$options['language'];
+        }
+
+        return $this->_request($url);
     }
 
     public function article($uuid)
